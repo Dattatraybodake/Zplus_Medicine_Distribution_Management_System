@@ -53,7 +53,7 @@ public class UserController {
     {
 //        return userService.viewAllUsers();
         List<UserModel> list = userService.viewAllUsers();
-        if(list.size() !=0)
+        if(list.size()!=0)
         {
             System.out.println("  list ="+list.size());
 //            return new ResponseEntity<>(list, HttpStatus.OK);

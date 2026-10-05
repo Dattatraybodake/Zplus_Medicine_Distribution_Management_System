@@ -11,6 +11,7 @@ import java.util.List;
 public interface UserService {
     boolean saveUsers(UserModel usermodel);
     List<UserModel> viewAllUsers();
-
     LoginResponse login(LoginRequest loginRequest);
+    public void deleteUser(int userid);
 }
+

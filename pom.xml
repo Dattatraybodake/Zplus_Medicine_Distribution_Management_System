@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.deesha</groupId>
-	<artifactId>medical_distributor</artifactId>
+	<artifactId>medicine_distributor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>

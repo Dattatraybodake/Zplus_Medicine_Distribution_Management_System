@@ -5,15 +5,18 @@ import com.deesha.medicine_distribution.dto.LoginResponse;
 import com.deesha.medicine_distribution.model.UserModel;
 import com.deesha.medicine_distribution.repository.UserRepository;
 import com.deesha.medicine_distribution.service.UserService;
-import jakarta.validation.constraints.Null;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Override
+    public void deleteUser(int userid) {
+
+    }
 
     @Autowired
     UserRepository userRepository;
