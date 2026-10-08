@@ -7,11 +7,23 @@ import com.deesha.medicine_distribution.repository.UserRepository;
 import com.deesha.medicine_distribution.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
 
+<<<<<<< HEAD
+=======
+    @Override
+    public void deleteUser(int userid) {
+
+    }
+
+>>>>>>> origin/master
     @Autowired
     UserRepository userRepository;
 
@@ -29,6 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public LoginResponse login(LoginRequest loginRequest) {
+<<<<<<< HEAD
         LoginResponse loginResponse = new LoginResponse();
 
         try{
@@ -51,11 +64,46 @@ public class UserServiceImpl implements UserService {
 
                 loginResponse.setFlag(false);
                 loginResponse.setMessage("Password is not correct");
+=======
+
+        LoginResponse loginresponse = new LoginResponse();
+        try {
+            UserModel usermodel = userRepository.findByUserName(loginRequest.getUsername());
+            if(usermodel == null)
+            {
+                loginresponse.setFlag(false);
+                loginresponse.setMessage("User Model not found");
+                return loginresponse;
+            }
+            if(usermodel.getUserName().equalsIgnoreCase(loginRequest.getUsername()))
+            {
+                if(usermodel.getPassword().equalsIgnoreCase(loginRequest.getPassword()))
+                {
+                    loginresponse.setFlag(true);
+                    loginresponse.setMessage("Login SuccessFull");
+                }
+                else
+                {
+                    loginresponse.setFlag(false);
+                    loginresponse.setMessage("Password is not correct");
+                }
+            }
+            else
+            {
+                loginresponse.setFlag(false);
+                loginresponse.setMessage("Username is not correct");
+>>>>>>> origin/master
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+<<<<<<< HEAD
         return loginResponse;
     }
 
 }
+=======
+        return loginresponse;
+    }
+}
+>>>>>>> origin/master

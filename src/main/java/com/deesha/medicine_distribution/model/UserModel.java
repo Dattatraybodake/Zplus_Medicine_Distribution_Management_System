@@ -20,6 +20,10 @@ public class UserModel {
     @Column(name = "username", unique = true)
     private String userName;
 
+<<<<<<< HEAD
+=======
+//    @JsonIgnore // never send the hash to the React app
+>>>>>>> origin/master
     @Column(name = "password")
     private String password;
 

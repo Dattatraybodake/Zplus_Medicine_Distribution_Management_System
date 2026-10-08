@@ -5,8 +5,15 @@ import lombok.Setter;
 
 @Getter
 @Setter
+<<<<<<< HEAD
 public class LoginRequest
 {
     private String email;
     private String password;
+=======
+public class LoginRequest {
+
+   private String username;
+   private String password;
+>>>>>>> origin/master
 }

@@ -56,7 +56,11 @@ public class UserController {
         if(list.size()!=0)
         {
             System.out.println("  list ="+list.size());
+<<<<<<< HEAD
 //            ret   urn new ResponseEntity<>(list, HttpStatus.OK);
+=======
+//            return new ResponseEntity<>(list, HttpStatus.OK);
+>>>>>>> origin/master
             return userService.viewAllUsers();
         }
         else
