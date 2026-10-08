@@ -1,0 +1,41 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+
+# Build output
+target/
+out/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local configuration
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# Java
+hs_err_pid*
+
+# Temporary files
+*.tmp
+*.swp
